@@ -85,7 +85,7 @@ npm install
    - Open `.env` file in the backend folder
    - Replace the placeholder values:
    ```
-   MONGODB_URI=mongodb+srv://your_username:your_password@cluster0.mongodb.net/skillswap?retryWrites=true&w=majority
+   MONGODB_URI=Your Mongodb atlas URI
    JWT_SECRET=your_jwt_secret_key_here_make_it_long_and_random
    PORT=5000
    ```
