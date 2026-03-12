@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skill Swap - Exchange skills, learn together, and grow your expertise">
+    <meta name="keywords" content="skill exchange, learning, teaching, collaboration">
+    <meta name="author" content="Skill Swap Platform">
+    <title>Skill Swap - Login | Exchange Skills, Learn Together</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="container">
+        <main class="form-container">
+            <header class="form-header">
+                <h1>Skill Swap</h1>
+                <p class="subtitle">Exchange Skills, Learn Together</p>
+            </header>
+            
+            <form id="loginForm" class="auth-form" novalidate>
+                <h2>Welcome Back! 👋</h2>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required
+                        placeholder="Enter your email"
+                        autocomplete="email"
+                    >
+                    <small>We'll never share your email</small>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input 
+                        type="password" 
+                        id="password" 
+                        name="password" 
+                        required
+                        placeholder="Enter your password"
+                        autocomplete="current-password"
+                    >
+                    <small>Must be at least 6 characters</small>
+                </div>
+                
+                <button type="submit" class="btn btn-primary">
+                    <span>Login to Continue</span>
+                </button>
+                
+                <div class="auth-link">
+                    <p>New to Skill Swap? <a href="register.html">Create your account</a></p>
+                </div>
+            </form>
+            
+            <div id="message" class="message" role="alert" aria-live="polite" style="display: none;"></div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

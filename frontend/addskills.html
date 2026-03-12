@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Add your skills to Skill Swap - Find perfect learning partners">
+    <meta name="keywords" content="skill exchange, learning, teaching, add skills, profile">
+    <meta name="author" content="Skill Swap Platform">
+    <title>Skill Swap - Add Skills | Build Your Profile</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Skill Swap</h1>
+            <div class="nav-buttons">
+                <span id="userName" class="tooltip" data-tooltip="Your profile">Loading...</span>
+                <button id="logoutBtn" class="btn btn-secondary" aria-label="Logout">
+                    <span>Logout</span>
+                </button>
+            </div>
+        </header>
+        
+        <main class="form-container">
+            <header class="form-header">
+                <h2>Build Your Skill Profile 🎯</h2>
+                <p class="subtitle">Tell us what you can teach and what you want to learn</p>
+            </header>
+            
+            <form id="skillsForm" novalidate>
+                <section class="skills-section">
+                    <h3>Skills I Can Teach 📚</h3>
+                    <div id="teachSkillsContainer">
+                        <div class="skill-input-group">
+                            <input 
+                                type="text" 
+                                class="skill-input" 
+                                placeholder="e.g., JavaScript, Guitar, Cooking"
+                                data-type="teach"
+                                aria-label="Skill you can teach"
+                            >
+                            <button type="button" class="btn btn-add" onclick="addSkillInput('teach')" aria-label="Add teaching skill">
+                                <span>+</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <section class="skills-section">
+                    <h3>Skills I Want to Learn 🎓</h3>
+                    <div id="learnSkillsContainer">
+                        <div class="skill-input-group">
+                            <input 
+                                type="text" 
+                                class="skill-input" 
+                                placeholder="e.g., Python, Piano, Photography"
+                                data-type="learn"
+                                aria-label="Skill you want to learn"
+                            >
+                            <button type="button" class="btn btn-add" onclick="addSkillInput('learn')" aria-label="Add learning skill">
+                                <span>+</span>
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary">
+                        <span>💾 Save Skills</span>
+                    </button>
+                    <a href="dashboard.html" class="btn btn-secondary">
+                        <span>⏭️ Skip for Now</span>
+                    </a>
+                </div>
+            </form>
+            
+            <div id="message" class="message" role="alert" aria-live="polite" style="display: none;"></div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Skill Swap Dashboard - Find your perfect skill exchange matches">
+    <meta name="keywords" content="skill exchange, learning, teaching, dashboard, matches">
+    <meta name="author" content="Skill Swap Platform">
+    <title>Skill Swap - Dashboard | Your Skill Matches</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Skill Swap</h1>
+            <div class="nav-buttons">
+                <span id="userName" class="tooltip" data-tooltip="Your profile">Loading...</span>
+                <button id="logoutBtn" class="btn btn-secondary" aria-label="Logout">
+                    <span>Logout</span>
+                </button>
+            </div>
+        </header>
+        
+        <main>
+            <section class="dashboard-header">
+                <h2>Your Skill Matches</h2>
+                <div class="user-skills">
+                    <article class="skill-summary">
+                        <h4>You Teach:</h4>
+                        <div id="userTeachSkills" class="skill-tags"></div>
+                    </article>
+                    <article class="skill-summary">
+                        <h4>You Want to Learn:</h4>
+                        <div id="userLearnSkills" class="skill-tags"></div>
+                    </article>
+                </div>
+                <button id="editSkillsBtn" class="btn btn-secondary">
+                    <span>✏️ Edit Skills</span>
+                </button>
+            </section>
+            
+            <section id="matchesContainer">
+                <div id="loadingSpinner" class="loading" aria-live="polite">Loading matches...</div>
+                <div id="noMatches" class="no-matches" style="display: none;" role="status">
+                    <h3>No matches found yet!</h3>
+                    <p>Add more skills to find compatible learning partners.</p>
+                    <button id="addMoreSkillsBtn" class="btn btn-primary">
+                        <span>🎯 Add More Skills</span>
+                    </button>
+                </div>
+                <div id="matchesGrid" class="matches-grid" role="region" aria-label="Skill matches"></div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
